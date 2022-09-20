@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           </code>
         </p>
 
-        <div className="flex items-center justify-center flex-wrap max-w-[800px]">
+        <div className="w-full flex-col flex items-center justify-center flex-wrap md:max-w-[800px] md:flex-row">
           <a
             href="https://nextjs.org/docs"
             className="m-4 p-6 text-left text-inherit no-underline border border-[#eaeaea] rounded-[10px] max-w-[300px] hover:text-[#0070f3] hover:border-[#0070f3] focus:text-[#0070f3] focus:border-[#0070f3] active:text-[#0070f3] active:border-[#0070f3]"
