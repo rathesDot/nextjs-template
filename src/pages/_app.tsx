@@ -10,12 +10,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    if (!process.env.FATHOM_TRACKING_CODE) {
+    if (!process.env.NEXT_PUBLIC_FATHOM_TRACKING_CODE) {
       return;
     }
 
-    Fathom.load(process.env.FATHOM_TRACKING_CODE, {
-      includedDomains: (process.env.FATHOM_INCLUDED_DOMAINS || "").split(","),
+    Fathom.load(process.env.NEXT_PUBLIC_FATHOM_TRACKING_CODE, {
+      includedDomains: (
+        process.env.NEXT_PUBLIC_FATHOM_INCLUDED_DOMAINS || ""
+      ).split(","),
     });
 
     function onRouteChangeComplete() {
